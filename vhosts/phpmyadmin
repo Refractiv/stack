@@ -1,0 +1,11 @@
+# Refractiv vhost default config for WordPress
+
+<VirtualHost *>
+  ServerAdmin admin@refractiv.co.uk
+  ServerName  phpmyadmin.dev
+  ServerAlias  www.phpmyadmin.dev
+
+  # Indexes + Directory Root.
+  DirectoryIndex index.php
+  DocumentRoot /usr/share/phpmyadmin
+</VirtualHost>

@@ -1,0 +1,15 @@
+# Refractiv vhost default config for WordPress
+
+<VirtualHost *>
+  ServerAdmin admin@refractiv.co.uk
+  ServerName  wordpress.dev
+  ServerAlias  www.wordpress.dev
+
+  # Indexes + Directory Root.
+  DirectoryIndex index.php
+  DocumentRoot /var/www/wordpress.dev/
+
+  # Logfiles
+  ErrorLog  /var/www/wordpress.dev/logs/error.log
+  CustomLog /var/www/wordpress.dev/logs/access.log combined
+</VirtualHost>
