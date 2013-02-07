@@ -6,16 +6,25 @@ Tested with Ubuntu 12.04 LTS
 
 To run the install, paste the following into a terminal:
 
-    curl -L https://raw.github.com/Refractiv/stack/master/install.sh | bash -s
+    wget -O - https://raw.github.com/Refractiv/stack/master/install.sh | bash -s
 
 ## What's installed?
 
 + git
 + cURL
-+ Apache 2
-+ PHP 5.3
-+ MySQL 5.5
++ Apache
++ PHP
++ MySQL
++ WordPress (latest)
 + phpMyAdmin
-+ Ruby 1.8.7
++ Ruby
 + Rubygems
 + Capistrano
+
+## Included extras
+
+WordPress is automatically installed and configured as an apache VirtualHost. You can reach a fresh version of WordPress in your browser by adding wordpress.dev to your hosts file:
+
+    <server_ip> wordpress.dev
+
+You can also do the same with phpmyadmin.dev
