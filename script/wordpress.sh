@@ -29,7 +29,7 @@ if [ "${ARGS[0]}" == "install" ]; then
     sudo touch /var/www/${ARGS[1]}/logs/access.log
     sudo chmod 777 /var/www/${ARGS[1]}/
     sudo cp ~/.stack/vhosts/wordpress /etc/apache2/sites-available/${ARGS[1]}
-    sudo sed -i s/wordpress\.dev/${ARGS[1]}.dev/g /etc/apache2/sites-available/${ARGS[1]}
+    sudo sed -i s/wordpress\.dev/${ARGS[1]}/g /etc/apache2/sites-available/${ARGS[1]}
     sudo a2ensite ${ARGS[1]}
     sudo service apache2 reload
 

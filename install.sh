@@ -1,6 +1,8 @@
+sudo aptitude update
+
 echo "Installing git..."
 
-sudo apt-get -fy install git curl
+sudo apt-get -fy install git curl unzip
 git clone https://github.com/Refractiv/stack.git ~/.stack
 
 echo "Installing Apache..."
@@ -38,11 +40,6 @@ sudo apt-get -fy install phpmyadmin
 sudo sed -i '$ a\Include /etc/phpmyadmin/apache.conf' /etc/apache2/apache2.conf
 sudo cp ~/.stack/vhosts/phpmyadmin /etc/apache2/sites-available/phpmyadmin
 sudo a2ensite phpmyadmin
-
-echo "Installing Ruby..."
-
-sudo apt-get -fy install ruby rubygems
-sudo gem install capistrano
 
 echo "Restarting Apache 2..."
 
