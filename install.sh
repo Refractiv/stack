@@ -22,15 +22,14 @@ sudo apt-get -fy install libapache2-mod-auth-mysql php5-mysql mysql-server
 
 echo "Installing WordPress..."
 
-cd /var/www
+cd /vagrant
 sudo curl -O http://wordpress.org/latest.zip
 sudo unzip latest.zip
 sudo rm -rf latest.zip
-sudo mv wordpress wordpress.dev
-sudo mkdir /var/www/wordpress.dev/logs
-sudo touch /var/www/wordpress.dev/logs/error.log
-sudo touch /var/www/wordpress.dev/logs/access.log
-sudo chmod 777 /var/www/wordpress.dev/
+sudo mkdir /vagrant/logs
+sudo touch /vagrant/logs/error.log
+sudo touch /vagrant/logs/access.log
+sudo chmod 777 /vagrant
 sudo cp ~/.stack/vhosts/wordpress /etc/apache2/sites-available/wordpress
 sudo a2ensite wordpress
 

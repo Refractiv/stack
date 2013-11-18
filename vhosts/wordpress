@@ -2,14 +2,14 @@
 
 <VirtualHost *>
   ServerAdmin admin@refractiv.co.uk
-  ServerName  wordpress.dev
+  ServerName  localhost
   ServerAlias  www.wordpress.dev
 
   # Indexes + Directory Root.
   DirectoryIndex index.php
-  DocumentRoot /var/www/wordpress.dev/
+  DocumentRoot /vagrant
 
   # Logfiles
-  ErrorLog  /var/www/wordpress.dev/logs/error.log
-  CustomLog /var/www/wordpress.dev/logs/access.log combined
+  ErrorLog  /vagrant/logs/error.log
+  CustomLog /vagrant/logs/access.log combined
 </VirtualHost>
